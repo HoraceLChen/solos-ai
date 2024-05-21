@@ -2,7 +2,14 @@
 
 This repo is only intended as an educational example of how to integrate AI in Rails
 
-To get started you'll need to do the following:
+Some notes about this rails file:
+* There is no DB set up
+* I have set the root page (main page) to 'dashboard#show', this was done by running: <br />
+```rails generate controller dashboard ``` <br />
+create new view called show.html.erb inside of 'app/views/dashboard' folder <br />
+  go into 'config/routes.rb' and adding: ```root "dashboard#show"```
+
+# To get started you'll need to do the following:
 
 * Head to https://platform.openai.com/ and sign up for an account.
 
@@ -16,7 +23,7 @@ To get started you'll need to do the following:
 
 * inside that .env file you'll need to add this: ```OPENAI_ACCESS_TOKEN='YOUR_TOKEN_FROM_OPENAI'``` replace 'YOUR_TOKEN_FROM_OPENAI' with your actual token from https://platform.openai.com/ you'll be able to find that token under API keys on the side menu
 
-* 
+*
 
 * ...
 # solos-ai
