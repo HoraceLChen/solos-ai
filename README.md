@@ -5,9 +5,11 @@ This repo is only intended as an educational example of how to integrate AI in R
 Some notes about this rails file:
 * There is no DB set up
 * I have set the root page (main page) to 'dashboard#show' or show.html.erb, this was done by running: <br />
-```rails generate controller dashboard ``` <br />
-create new view called show.html.erb inside of 'app/views/dashboard' folder <br />
-  go into 'config/routes.rb' and adding: ```root "dashboard#show"```
+1. `rails generate controller dashboard` <br />
+2. Create new view called show.html.erb inside of 'app/views/dashboard' folder <br />
+3. go into 'config/routes.rb' and adding:<br />
+  `root "dashboard#show"`
+
 
 # To get started you'll need to do the following:
 
@@ -17,19 +19,20 @@ create new view called show.html.erb inside of 'app/views/dashboard' folder <br 
 
 * Open terminal and navigate to wherever you'd like to clone this repo
 
-* run ```gh repo clone HoraceLChen/solos-ai``` to clone this repo
+* run `gh repo clone HoraceLChen/solos-ai` to clone this repo
 
 * create a .env file in the root directory of the rails file. (basically create a .env file outside of all the app, config, db... etc files)
 
-* inside that .env file you'll need to add this: ```OPENAI_ACCESS_TOKEN='YOUR_TOKEN_FROM_OPENAI'``` replace 'YOUR_TOKEN_FROM_OPENAI' with your actual token from https://platform.openai.com/ you'll be able to find that token under API keys on the side menu
+* inside that .env file you'll need to add this: `OPENAI_ACCESS_TOKEN='YOUR_TOKEN_FROM_OPENAI'` replace 'YOUR_TOKEN_FROM_OPENAI' with your actual token from https://platform.openai.com/ you'll be able to find that token under API keys on the side menu
 
-* Then make a new file: config/initializers/openai.rb and add these lines: <br />
-<code>OpenAI.configure do |config| <br />
-config.access_token = ENV.fetch("OPENAI_ACCESS_TOKEN") <br />
-end <code>
+* Then make a new file called `openai.rb` inside of your config/initializers folder. The file path should look like this: config/initializers/openai.rb
+* Add these lines to openai.rb file: <br />
+<code>OpenAI.configure do |config|
+config.access_token = ENV.fetch("OPENAI_ACCESS_TOKEN")
+end </code>
 
-* run ```bundle install```
 
+* run `bundle install`
+* run `rails s` or `rails server`
 
-* ...
 # solos-ai
