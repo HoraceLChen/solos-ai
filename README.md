@@ -4,7 +4,7 @@ This repo is only intended as an educational example of how to integrate AI in R
 
 Some notes about this rails file:
 * There is no DB set up
-* I have set the root page (main page) to 'dashboard#show', this was done by running: <br />
+* I have set the root page (main page) to 'dashboard#show' or show.html.erb, this was done by running: <br />
 ```rails generate controller dashboard ``` <br />
 create new view called show.html.erb inside of 'app/views/dashboard' folder <br />
   go into 'config/routes.rb' and adding: ```root "dashboard#show"```
@@ -23,7 +23,13 @@ create new view called show.html.erb inside of 'app/views/dashboard' folder <br 
 
 * inside that .env file you'll need to add this: ```OPENAI_ACCESS_TOKEN='YOUR_TOKEN_FROM_OPENAI'``` replace 'YOUR_TOKEN_FROM_OPENAI' with your actual token from https://platform.openai.com/ you'll be able to find that token under API keys on the side menu
 
-*
+* Then make a new file: config/initializers/openai.rb and add these lines: <br />
+<code>OpenAI.configure do |config| <br />
+config.access_token = ENV.fetch("OPENAI_ACCESS_TOKEN") <br />
+end <code>
+
+* run ```bundle install```
+
 
 * ...
 # solos-ai

@@ -26,13 +26,17 @@ gem "stimulus-rails"
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
 gem "jbuilder"
 
+gem 'sass-rails', '~> 6.0'
 
 
 
 ###### FOR SOLO: RUBY NOW HAS A CHATGPT GEM CALLED RUBY-OPENAI, IT MAKES USING AI IN RAILS THAT MUCH EASIER ######
 gem "ruby-openai"
 
+# Adding bootstrap to build homepage really fast
+gem 'bootstrap', '~> 5.2', '>= 5.2.3'
 
+gem 'dotenv-rails'
 
 
 # Use Redis adapter to run Action Cable in production
