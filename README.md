@@ -34,5 +34,7 @@ end </code>
 
 * run `bundle install`
 * run `rails s` or `rails server`
+* have fun with your new AI buddy lmao
 
-# solos-ai
+
+![](https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExODEwbDFxeTltYjA5aXI3anVvdm80cDRrOTU1c3FyamV4dDk1a25ybyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/YoB1eEFB6FZ1m/giphy.gif)
