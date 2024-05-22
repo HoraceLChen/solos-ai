@@ -24,7 +24,7 @@ create new view called show.html.erb inside of 'app/views/dashboard' folder <br 
 * inside that .env file you'll need to add this: ```OPENAI_ACCESS_TOKEN='YOUR_TOKEN_FROM_OPENAI'``` replace 'YOUR_TOKEN_FROM_OPENAI' with your actual token from https://platform.openai.com/ you'll be able to find that token under API keys on the side menu
 
 * Then make a new file: config/initializers/openai.rb and add these lines: <br />
-<code>OpenAI.configure do |config| <br />
+<code>OpenAI.configure do |config|
 config.access_token = ENV.fetch("OPENAI_ACCESS_TOKEN") <br />
 end <code>
 
