@@ -2,17 +2,32 @@ class MessageController < ApplicationController
   def chat_post
     if params[:message]
       @message = params[:message]
+      ## for TEXT RESPONSE
+      # client = OpenAI::Client.new
+      # chaptgpt_response = client.chat(parameters: {
+      #   model: "gpt-3.5-turbo",
+      #   messages: [{ role: "user", content: @message }]
+      # })
+      # @response = chaptgpt_response
+      # redirect_to chat_path(@response)
+
+        ## FOR IMAGES
       client = OpenAI::Client.new
-      chaptgpt_response = client.chat(parameters: {
-        model: "gpt-3.5-turbo",
-        messages: [{ role: "user", content: @message }]
+      dalle_response = client.images.generate(parameters: {
+        model: "dall-e-3",
+        prompt: @message,
+        n: 1,
+        size: "1024x1024"
       })
-      @response = chaptgpt_response
+
+      # Access the URL of the generated image
+      @response = dalle_response
       redirect_to chat_path(@response)
     end
   end
 
   def chat
     @content = params
+
   end
 end

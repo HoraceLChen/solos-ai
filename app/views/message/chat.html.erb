@@ -19,8 +19,9 @@
       <div class="card">
         <div class="card-body d-flex align-items-center" style="background-color: rgba(152, 251, 207, 0.72)">
         <img src="https://static.vecteezy.com/system/resources/previews/021/059/827/non_2x/chatgpt-logo-chat-gpt-icon-on-white-background-free-vector.jpg" alt="" style="width: 50px; height: 50px; border-radius: 50%;">
-        <% if @content['choices'] %>
-          <p class="m-0 mx-3"><%= @content['choices'][0]['message']['content'] %></p>
+        <% if @content['data'] %>
+          <p class="m-0 mx-3"><%= @content['data'][0]['url'] %></p>
+          <img src="<%= @content['data'][0]['url'] %>" alt="">
         <% else %>
           <p class="m-0 mx-3">Ask me something!</p>
         <% end %>

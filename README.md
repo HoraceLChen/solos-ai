@@ -31,7 +31,6 @@ Some notes about this rails file:
 config.access_token = ENV.fetch("OPENAI_ACCESS_TOKEN")
 end </code>
 
-
 * run `bundle install`
 * run `rails s` or `rails server`
 * have fun with your new AI buddy lmao
